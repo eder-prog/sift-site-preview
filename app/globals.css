@@ -580,23 +580,32 @@ footer.site { border-top: 1px solid var(--border); padding: 56px 32px 40px; }
   .manifesto-ext-inner { margin: 0 auto; padding-left: 0; }
   section.glimpses { padding: 60px 20px 80px; }
   .glimpse + .glimpse { margin-top: 80px; }
-  /* Mock rows: prevent overflow at narrow widths */
+  /* Mock rows: simpler mobile layout — pill + name only */
   .mock { padding: 14px; }
+  .mock-bar .lbl { font-size: 10px; }
   .mock-row {
     gap: 8px; padding: 10px 12px;
     min-width: 0;
   }
   .mock-row .name {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    min-width: 0; flex: 1 1 0;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     font-size: 13px;
   }
-  .mock-row .mrr { font-size: 11px; }
+  .mock-row .mrr { font-size: 11px; flex-shrink: 0; }
+  .mock-row .age { font-size: 10px; flex-shrink: 0; }
+
+  /* Briefing tasks: meta wraps to new line */
+  .brief-head { flex-wrap: wrap; gap: 6px 10px; }
+  .brief-head .ttl { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .task { flex-wrap: wrap; row-gap: 2px; }
+  .task .meta { margin-left: 16px; flex-basis: 100%; }
+
+  /* Signals: keep 2-col but compact */
   .signal-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
-  .signal { padding: 10px; }
-  .signal .val { font-size: 16px; }
+  .signal { padding: 10px; min-width: 0; }
+  .signal .lbl { font-size: 9px; }
+  .signal .val { font-size: 15px; word-break: break-all; }
   section.delivers { padding: 80px 20px; }
   section.voice { padding: 120px 20px; }
   .voice-inner { gap: 56px; }
@@ -612,14 +621,19 @@ footer.site { border-top: 1px solid var(--border); padding: 56px 32px 40px; }
   .footer-right { align-items: flex-start; }
 }
 
-/* Tight phones — hide age column to save horizontal space */
+/* Phones — pill + name only (hide MRR + age) */
+@media (max-width: 600px) {
+  .mock-row .mrr,
+  .mock-row .age { display: none; }
+}
+
+/* Tight phones — tighter header + section padding */
 @media (max-width: 480px) {
   header.site { padding: 12px 16px; }
   header.site.scrolled { padding: 8px 16px; }
   .header-right { gap: 8px; }
   .btn-header { padding: 6px 10px; font-size: 11px; }
   .lang { font-size: 11px; }
-  .mock-row .age { display: none; }
   .glimpse + .glimpse { margin-top: 64px; }
   section.glimpses { padding: 48px 16px 64px; }
   section.demo { padding: 56px 16px 72px; }
