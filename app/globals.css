@@ -592,8 +592,9 @@ footer.site { border-top: 1px solid var(--border); padding: 56px 32px 40px; }
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     font-size: 13px;
   }
-  .mock-row .mrr { font-size: 11px; flex-shrink: 0; }
-  .mock-row .age { font-size: 10px; flex-shrink: 0; }
+  /* Hide MRR + age across all mobile/tablet widths — keep pill + name only */
+  .mock-row .mrr,
+  .mock-row .age { display: none; }
 
   /* Briefing tasks: meta wraps to new line */
   .brief-head { flex-wrap: wrap; gap: 6px 10px; }
@@ -619,12 +620,6 @@ footer.site { border-top: 1px solid var(--border); padding: 56px 32px 40px; }
   footer.site { padding: 40px 20px 32px; }
   .footer-inner { flex-direction: column; }
   .footer-right { align-items: flex-start; }
-}
-
-/* Phones — pill + name only (hide MRR + age) */
-@media (max-width: 600px) {
-  .mock-row .mrr,
-  .mock-row .age { display: none; }
 }
 
 /* Tight phones — tighter header + section padding */
