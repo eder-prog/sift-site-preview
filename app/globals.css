@@ -570,19 +570,59 @@ footer.site { border-top: 1px solid var(--border); padding: 56px 32px 40px; }
   header.site { padding: 14px 20px; }
   header.site.scrolled { padding: 10px 20px; }
   .header-nav { display: none; }
+  .header-right { gap: 12px; }
+  .btn-header {
+    padding: 7px 12px; font-size: 12px;
+    white-space: nowrap; line-height: 1.2;
+  }
   section.hero { padding: 100px 20px 60px; }
   section.manifesto-ext { padding: 120px 20px; }
   .manifesto-ext-inner { margin: 0 auto; padding-left: 0; }
   section.glimpses { padding: 60px 20px 80px; }
   .glimpse + .glimpse { margin-top: 80px; }
+  /* Mock rows: prevent overflow at narrow widths */
+  .mock { padding: 14px; }
+  .mock-row {
+    gap: 8px; padding: 10px 12px;
+    min-width: 0;
+  }
+  .mock-row .name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .mock-row .mrr { font-size: 11px; }
+  .signal-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .signal { padding: 10px; }
+  .signal .val { font-size: 16px; }
   section.delivers { padding: 80px 20px; }
   section.voice { padding: 120px 20px; }
   .voice-inner { gap: 56px; }
   .voice-divider { margin: -16px 0; }
-  section.demo { padding: 100px 20px; }
+  section.demo { padding: 64px 20px 80px; }
+  .demo .lede { margin: 0 0 24px; }
+  .demo form { gap: 10px; }
+  .demo input[type="email"], .demo input[type="text"], .demo input[type="tel"] {
+    padding: 12px 14px; font-size: 14px;
+  }
   footer.site { padding: 40px 20px 32px; }
   .footer-inner { flex-direction: column; }
   .footer-right { align-items: flex-start; }
+}
+
+/* Tight phones — hide age column to save horizontal space */
+@media (max-width: 480px) {
+  header.site { padding: 12px 16px; }
+  header.site.scrolled { padding: 8px 16px; }
+  .header-right { gap: 8px; }
+  .btn-header { padding: 6px 10px; font-size: 11px; }
+  .lang { font-size: 11px; }
+  .mock-row .age { display: none; }
+  .glimpse + .glimpse { margin-top: 64px; }
+  section.glimpses { padding: 48px 16px 64px; }
+  section.demo { padding: 56px 16px 72px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
