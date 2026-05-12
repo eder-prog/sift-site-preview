@@ -1,0 +1,36 @@
+{
+  "name": "sift-site-preview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sift — WhatsApp customer intelligence layer. Manifesto/brand landing site. Next.js + TypeScript + Tailwind.",
+  "homepage": "https://github.com/eder-prog/sift-site-preview",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eder-prog/sift-site-preview.git"
+  },
+  "author": "Growth Solutions US <team@growthsolutionsus.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10",
+    "eslint": "^9",
+    "eslint-config-next": "^15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4",
+    "typescript": "^5"
+  }
+}
