@@ -290,17 +290,71 @@ section.manifesto-ext { padding: 180px 32px 180px; position: relative; }
   letter-spacing: -0.03em; line-height: 1.15;
   margin: 0 0 40px; color: var(--text);
 }
-.manifesto-ext p {
-  font-family: var(--font-sans); font-weight: 400;
-  font-size: clamp(20px, 2vw, 28px);
-  line-height: 1.35; letter-spacing: -0.015em;
-  color: var(--text-secondary); margin: 0 0 28px; max-width: 720px;
-}
-.manifesto-ext p.lead { color: var(--text); font-weight: 500; }
 .manifesto-ext .signoff {
   font-family: var(--font-sans); font-weight: 600;
   font-size: clamp(22px, 2.2vw, 32px);
-  color: var(--text); margin-top: 56px; letter-spacing: -0.02em;
+  color: var(--text); margin: 56px 0 0; letter-spacing: -0.02em;
+}
+
+/* Manifesto flow — visual timeline replacing paragraphs */
+.manifesto-ext .flow {
+  list-style: none;
+  padding: 0;
+  margin: 64px 0 0;
+  max-width: 640px;
+  position: relative;
+}
+.manifesto-ext .flow::before {
+  content: "";
+  position: absolute;
+  left: 21px; top: 30px; bottom: 30px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border) 8%, var(--border) 92%, transparent);
+  pointer-events: none;
+}
+.manifesto-ext .flow-step {
+  display: flex; align-items: flex-start;
+  gap: 24px;
+  padding: 20px 0;
+  position: relative;
+  transition: transform 280ms cubic-bezier(.2,.7,.2,1);
+}
+.manifesto-ext .flow-step:hover { transform: translateX(6px); }
+.manifesto-ext .flow-num {
+  width: 44px; height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+  border-radius: 50%;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: background 280ms ease, color 280ms ease, box-shadow 280ms ease;
+  animation: numPulse 3.6s ease-in-out infinite;
+}
+.manifesto-ext .flow-step:hover .flow-num {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 0 6px rgba(0,217,160,0.10), 0 0 32px rgba(0,217,160,0.45);
+}
+@keyframes numPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,217,160,0); }
+  50%      { box-shadow: 0 0 0 4px rgba(0,217,160,0.08); }
+}
+.manifesto-ext .flow-content { padding-top: 4px; min-width: 0; }
+.manifesto-ext .flow-content h3 {
+  font-family: var(--font-sans); font-weight: 600;
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: -0.025em; line-height: 1.05;
+  margin: 0 0 8px; color: var(--text);
+}
+.manifesto-ext .flow-content p {
+  font-family: var(--font-sans); font-weight: 400;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.55; letter-spacing: -0.005em;
+  color: var(--text-secondary);
+  margin: 0; max-width: 460px;
 }
 
 /* ===== SECTION 3 · PRODUCT GLIMPSES ===== */

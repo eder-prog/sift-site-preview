@@ -11,10 +11,17 @@ export function ManifestoExtended({ t }: { t: Translations }) {
           <span className="accent">{m.h2Accent}</span>
           {m.h2After}
         </h2>
-        <p className="lead reveal" dangerouslySetInnerHTML={{ __html: m.leadHtml }} />
-        <p className="reveal" dangerouslySetInnerHTML={{ __html: m.p2Html }} />
-        <p className="reveal" dangerouslySetInnerHTML={{ __html: m.p3Html }} />
-        <p className="reveal" dangerouslySetInnerHTML={{ __html: m.p4Html }} />
+        <ol className="flow">
+          {m.steps.map((step, i) => (
+            <li key={i} className={`flow-step reveal${i ? ` delay-${i}` : ''}`}>
+              <span className="flow-num">{step.num}</span>
+              <div className="flow-content">
+                <h3>{step.h3}</h3>
+                <p>{step.p}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
         <p className="signoff reveal">{m.signoff}</p>
       </div>
     </section>

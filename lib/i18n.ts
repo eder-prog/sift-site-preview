@@ -40,10 +40,7 @@ export type Translations = {
     h2Before: string;
     h2Accent: string;
     h2After: string;
-    leadHtml: string;
-    p2Html: string;
-    p3Html: string;
-    p4Html: string;
+    steps: Array<{ num: string; h3: string; p: string }>;
     signoff: string;
   };
   glimpses: {
@@ -130,14 +127,11 @@ export const pt: Translations = {
     h2Before: 'Você não precisa de mais um CRM. Você precisa ',
     h2Accent: 'do que já existe',
     h2After: ', lido.',
-    leadHtml:
-      'Em B2B, customer success acontece no WhatsApp. É lá que o cliente reclama, pergunta, dá pista de que vai sair — e é lá que sua equipe responde, todo dia, manualmente.',
-    p2Html:
-      'O canal já existe. O time já existe. <strong>O sinal está lá.</strong> Cada mensagem é dado bruto sobre saúde, intenção, risco — só ninguém tem tempo de ler 800 mensagens por dia em 14 grupos.',
-    p3Html:
-      'Sift é uma camada de leitura sobre essas conversas. Não substitui ninguém. Não pede pra trocar de ferramenta. Não fica fingindo que IA vai responder pelo seu time.',
-    p4Html:
-      'Lê, separa, devolve. Briefing automático de cada cliente. Sinais de saúde extraídos do tom dos últimos 14 dias. Tarefas pendentes ranqueadas por urgência.',
+    steps: [
+      { num: '01', h3: 'Lê', p: 'Os grupos de WhatsApp onde sua equipe já conversa com clientes — sem trocar de ferramenta.' },
+      { num: '02', h3: 'Filtra', p: 'Separa o sinal — pedidos, prazos, sinais de risco — do ruído operacional do dia.' },
+      { num: '03', h3: 'Devolve', p: 'Briefing, tarefas e contexto direto pro seu time. Sem dashboard novo.' },
+    ],
     signoff: 'Sift é essa camada.',
   },
   glimpses: {
@@ -262,14 +256,11 @@ export const en: Translations = {
     h2Before: "You don't need another CRM. You need ",
     h2Accent: 'what already exists',
     h2After: ', read.',
-    leadHtml:
-      "In B2B, customer success happens on WhatsApp. That's where customers complain, ask, hint they're leaving — and where your team responds, every day, manually.",
-    p2Html:
-      'The channel exists. The team exists. <strong>The signal is there.</strong> Every message is raw data about health, intent, risk — only no one has time to read 800 messages a day across 14 groups.',
-    p3Html:
-      "Sift is a reading layer over those conversations. It replaces no one. It doesn't ask you to switch tools. It doesn't pretend AI will reply for your team.",
-    p4Html:
-      'Reads, separates, returns. Auto briefing per customer. Health signals extracted from the tone of the last 14 days. Pending tasks ranked by urgency.',
+    steps: [
+      { num: '01', h3: 'Reads', p: 'The WhatsApp groups where your team already talks to customers — no tool switch.' },
+      { num: '02', h3: 'Filters', p: 'Separates the signal — requests, deadlines, risk hints — from the operational noise.' },
+      { num: '03', h3: 'Returns', p: 'Briefing, tasks, and context delivered to your team. No new dashboard.' },
+    ],
     signoff: 'Sift is that layer.',
   },
   glimpses: {
