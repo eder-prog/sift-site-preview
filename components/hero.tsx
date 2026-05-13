@@ -179,26 +179,39 @@ export function Hero({ t }: { t: Translations }) {
         <div className="hero-vignette"></div>
 
         <div className="hero-center">
-          <div className="wordmark-monument">
-            <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" aria-label="Sift">
-              <text
-                x="400"
-                y="240"
-                textAnchor="middle"
-                fill="#FFFFFF"
-                fontFamily="Inter, sans-serif"
-                fontWeight="800"
-                fontSize="220"
-                letterSpacing="-8"
-              >
-                Sift
-              </text>
-              <g fill="#00D9A0">
-                {Array.from({ length: 14 }, (_, i) => (
-                  <circle key={i} cx={216 + i * 28} cy={266} r={5} />
-                ))}
-              </g>
-            </svg>
+          <div className="brand-stack">
+            <div className="hero-symbol">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <g fill="#00D9A0">
+                  <rect x="8"  y="6"  width="44" height="8" rx="4" />
+                  <rect x="8"  y="17" width="30" height="8" rx="4" />
+                  <rect x="16" y="28" width="36" height="8" rx="4" />
+                  <rect x="24" y="39" width="30" height="8" rx="4" />
+                  <rect x="12" y="50" width="44" height="8" rx="4" />
+                </g>
+              </svg>
+            </div>
+            <div className="wordmark-monument">
+              <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" aria-label="Sift">
+                <text
+                  x="400"
+                  y="240"
+                  textAnchor="middle"
+                  fill="#FFFFFF"
+                  fontFamily="Inter, sans-serif"
+                  fontWeight="800"
+                  fontSize="220"
+                  letterSpacing="-8"
+                >
+                  Sift
+                </text>
+                <g fill="#00D9A0">
+                  {Array.from({ length: 14 }, (_, i) => (
+                    <circle key={i} cx={216 + i * 28} cy={266} r={5} />
+                  ))}
+                </g>
+              </svg>
+            </div>
           </div>
           <h1 className="hero-tagline">
             {t.hero.taglineBefore}
