@@ -151,26 +151,26 @@ section.hero a, section.hero button { cursor: none; }
 }
 .hero-center > * { pointer-events: auto; }
 
-/* Brand lockup: symbol stacked over wordmark */
+/* Brand lockup: symbol next to wordmark (horizontal) */
 .brand-stack {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 14px;
-}
-.hero-symbol {
-  width: clamp(110px, 14vw, 180px);
+  display: flex; flex-direction: row; align-items: center;
+  gap: clamp(10px, 1.6vw, 20px);
+  max-width: 100%;
   animation: rise 1.2s cubic-bezier(.2,.7,.2,1) both;
 }
+.hero-symbol { flex-shrink: 0; line-height: 0; }
 .hero-symbol svg {
-  display: block; width: 100%; height: auto;
+  display: block;
+  height: clamp(74px, 14vw, 180px);
+  width: auto;
   filter: drop-shadow(0 0 24px rgba(0,217,160,0.28));
 }
 
-.wordmark-monument {
-  width: min(70vw, 880px);
-  animation: rise 1.2s .25s cubic-bezier(.2,.7,.2,1) both;
-}
+.wordmark-monument { flex-shrink: 1; min-width: 0; line-height: 0; }
 .wordmark-monument svg {
-  display: block; width: 100%; height: auto;
+  display: block;
+  height: clamp(96px, 18vw, 230px);
+  width: auto; max-width: 100%;
   filter: drop-shadow(0 0 40px rgba(0,217,160,0.18));
 }
 @keyframes rise {

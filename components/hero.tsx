@@ -192,9 +192,9 @@ export function Hero({ t }: { t: Translations }) {
               </svg>
             </div>
             <div className="wordmark-monument">
-              <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" aria-label="Sift">
+              <svg viewBox="0 0 420 290" xmlns="http://www.w3.org/2000/svg" aria-label="Sift">
                 <text
-                  x="400"
+                  x="210"
                   y="240"
                   textAnchor="middle"
                   fill="#FFFFFF"
@@ -207,7 +207,7 @@ export function Hero({ t }: { t: Translations }) {
                 </text>
                 <g fill="#00D9A0">
                   {Array.from({ length: 14 }, (_, i) => (
-                    <circle key={i} cx={216 + i * 28} cy={266} r={5} />
+                    <circle key={i} cx={40 + i * 26} cy={266} r={5} />
                   ))}
                 </g>
               </svg>
