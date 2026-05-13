@@ -163,14 +163,6 @@ section.hero a, section.hero button { cursor: none; }
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: none; }
 }
-.sieve-bar { opacity: 0; transform: translateX(-12px); animation: barIn .8s cubic-bezier(.2,.7,.2,1) forwards; }
-.sieve-bar:nth-child(1) { animation-delay: .15s; }
-.sieve-bar:nth-child(2) { animation-delay: .25s; }
-.sieve-bar:nth-child(3) { animation-delay: .35s; }
-.sieve-bar:nth-child(4) { animation-delay: .45s; }
-.sieve-bar:nth-child(5) { animation-delay: .55s; }
-@keyframes barIn { to { opacity: 1; transform: none; } }
-
 .hero-tagline {
   font-family: var(--font-sans); font-weight: 600;
   font-size: clamp(28px, 4vw, 56px);

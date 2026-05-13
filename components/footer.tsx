@@ -9,7 +9,7 @@ export function Footer({ t }: { t: Translations }) {
         <div className="footer-left">
           <a className="brand" href="#top" aria-label="Sift">
             <SiftMark size={24} />
-            <span className="wm">sift</span>
+            <span className="wm">Sift</span>
           </a>
           <div className="copy" dangerouslySetInnerHTML={{ __html: t.footer.copyHtml }} />
         </div>

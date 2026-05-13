@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'Sift transforma grupos de WhatsApp em inteligência de clientes. Uma camada de leitura sobre conversas existentes — não um CRM, não um chatbot.',
   themeColor: '#0A0A0A',
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230A0A0A'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='%2300D9A0' font-family='Inter,sans-serif' font-weight='700' font-size='40'>S</text></svg>",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230A0A0A'/><g fill='%2300D9A0'><rect x='8' y='6' width='44' height='8' rx='4'/><rect x='8' y='17' width='30' height='8' rx='4'/><rect x='16' y='28' width='36' height='8' rx='4'/><rect x='24' y='39' width='30' height='8' rx='4'/><rect x='12' y='50' width='44' height='8' rx='4'/></g></svg>",
   },
 };
 

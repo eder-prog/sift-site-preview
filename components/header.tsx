@@ -32,7 +32,7 @@ export function Header({ t }: { t: Translations }) {
     <header className="site" ref={headerRef} id="siteHeader">
       <a className="brand" href="#top" aria-label="Sift">
         <SiftMark />
-        <span className="wm">sift</span>
+        <span className="wm">Sift</span>
       </a>
 
       <nav className="header-nav" aria-label="Primary">

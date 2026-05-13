@@ -180,25 +180,24 @@ export function Hero({ t }: { t: Translations }) {
 
         <div className="hero-center">
           <div className="wordmark-monument">
-            <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" aria-label="sift">
-              <g fill="#00D9A0">
-                <rect className="sieve-bar" x="12" y="28" width="124" height="16" rx="6" />
-                <rect className="sieve-bar" x="12" y="60" width="92" height="16" rx="6" />
-                <rect className="sieve-bar" x="28" y="92" width="112" height="16" rx="6" />
-                <rect className="sieve-bar" x="44" y="124" width="92" height="16" rx="6" />
-                <rect className="sieve-bar" x="28" y="156" width="124" height="16" rx="6" />
-              </g>
+            <svg viewBox="0 0 800 290" xmlns="http://www.w3.org/2000/svg" aria-label="Sift">
               <text
-                x="172"
-                y="172"
+                x="400"
+                y="240"
+                textAnchor="middle"
                 fill="#FFFFFF"
                 fontFamily="Inter, sans-serif"
-                fontWeight="700"
-                fontSize="192"
+                fontWeight="800"
+                fontSize="220"
                 letterSpacing="-8"
               >
-                ift
+                Sift
               </text>
+              <g fill="#00D9A0">
+                {Array.from({ length: 14 }, (_, i) => (
+                  <circle key={i} cx={216 + i * 28} cy={266} r={5} />
+                ))}
+              </g>
             </svg>
           </div>
           <h1 className="hero-tagline">
